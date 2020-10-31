@@ -55,17 +55,16 @@ passwd your_account_name
 3. ???
 
 4. Set locales (in my case czech language) and set-up daemons.
+/etc/locale.gen
 ```
-cat >> /etc/locale.gen << END
 cs_CZ ISO-8859-2
 cs_CZ.UTF-8 UTF-8
-END
 ```
+/etc/env.d/02locale
 ```
-cat >> /etc/env.d/02locale << END
+
 LANG="cs_CZ.UTF-8"
 LC_COLLATE="C"
-END
 ```
 ```
 locale-gen
@@ -116,7 +115,7 @@ Windows Registry Editor Version 5.00
 "DefaultUid"=dword:000003e8
 ```
 ---
-## Step 5. Install OH-MY-ZSH on Gentoo with beautiful powerlevel10k theme
+## Step 5. Install Gentoo web developing packages and oh-my-zsh with beautiful powerlevel10k theme
 
 1. Remove package.use directory
 ```
@@ -209,7 +208,7 @@ emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo zsh com
 ```
 5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` `zsh-completions`. 😄
 ```
-emerge zsh oh-my-zsh gentoo-zsh-completition zsh-completions
+emerge zsh oh-my-zsh gentoo-zsh-completions zsh-completions
 export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
 ```
