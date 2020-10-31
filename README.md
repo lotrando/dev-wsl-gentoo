@@ -1,95 +1,78 @@
 # Web develop Gentoo for WSL by Lotrando
 
-This is complete WSL installation tutorial, how install Gentoo linux for Web Developing with oh-my-zsh and Powerlevel10k theme on Windows 10. 😄
-
-
+This is complete WSL installation tutorial, how install Gentoo linux for Web Developing with oh-my-zsh and Powerlevel10k theme on Windows.
 
 <h1 align="center">
   <img src="readme.png" alt="my p10k setting" />
 </h1>
 
-
 ## Step 1. Enable Microsoft-Windows-Subsystem-Linux and Virtual machines on your Windows 10
 
 1. Run powershell.exe on windows 10 as Administrator.
-2. Enable Microsoft-Windows-Subsystem-Linux components for WSL 1.
 
+2. Enable Microsoft-Windows-Subsystem-Linux components for WSL 1.
 ```
   dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
-
 3. Enable Hyper-V for WSL 2 (Additional requirement for WSL 2 support).
-
 ```
   dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-
 4. Download WSL 2 kernel upddate from next link and install it.
-
 ```
   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ```
-
 5. Reboot your Windows 10.
-
 ---
-
 ## Step 2. Create Gentoo WSL Machine
 
 1. Install [Windows Terminal](https://www.microsoft.com/cs-cz/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from Microsoft store. Run again powershell.exe as Administrator and set working directory to `C:\Users\YOURUSERNAME\Downloads\`
-2. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/) or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\` and decompres file to simple *.tar with 7Zip or WinRAR.
-3. Destination file must have name `stage3-amd64-nomultilib-20201028T214503Z.tar`.
-4. Create Gentoo WSL Machine
 
+2. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/) or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\` and decompres file to simple *.tar with 7Zip.
+
+3. Destination file must have name `stage3-amd64-nomultilib-20201028T214503Z.tar`.
+
+4. Create Gentoo WSL Machine
 ```
   wsl --import "Gentoo" "C:\Gentoo" "stage3-amd64-nomultilib-20201028T214503Z.tar" --version 2
 ```
-
 Set Gentoo to default distro
-
 ```
   wsl --setdefault Gentoo
 ```
-
+---
 ## Step 3. Update portage, install packages and create user
 
 1. In Windows Terminal run Gentoo distro ( default is root ) anr run
-
 ```
  emerge-webrsync
 ```
-
 2. Create classic user and set password.
-
 ```
 useradd -m -G audio,video,usb,cdrom,portage,users,wheel -s /bin/bash your_account_name
 passwd your_account_name
 ```
-
-3.
-
-```... and long time compiling ...
+3. ???
 
 4. Set locales (in my case czech language) and set-up daemons.
-
 ```
-cat >> /etc/locale.gen << IEND
+cat >> /etc/locale.gen << END
 cs_CZ ISO-8859-2
 cs_CZ.UTF-8 UTF-8
-IEND
-
-cat >> /etc/env.d/02locale << IEND
+END
+```
+```
+cat >> /etc/env.d/02locale << END
 LANG="cs_CZ.UTF-8"
 LC_COLLATE="C"
-IEND
-
+END
+```
+```
 locale-gen
 echo "Europe/Prague" > /etc/timezone
 emerge --config sys-libs/timezone-data
 eselect locale list
-
 eselect locale set (number of selected locale)
-
 source /etc/profile
 ```
 ```
@@ -99,15 +82,14 @@ rc-update add gpm default
 rc-update add numlock default
 ```
 2. Configure `sudo`, in `/etc/sudoers` uncomment next line to allow members of group `wheel` to execute any command default with password.
-
 ```
 %wheel ALL=(ALL) ALL
 ```
 or same thing without password
-
 ```
 %wheel ALL=(ALL) NOPASSWD: ALL
 ```
+---
 ## Step 4. Edit registration file for switch Windows Terminal to run with default classic user
 
 In regedit.exe find
@@ -125,7 +107,7 @@ like this ...
 ```
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{c92606f5-7844-4bdc-8f57-71f365f1a3fe}]
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{your_gentoo_wsl}]
 "State"=dword:00000001
 "DistributionName"="Gentoo"
 "Version"=dword:00000002
@@ -133,28 +115,21 @@ Windows Registry Editor Version 5.00
 "Flags"=dword:0000000f
 "DefaultUid"=dword:000003e8
 ```
-## Step 3. Install OH-MY-ZSH on Gentoo with beautiful powerlevel10k theme
+---
+## Step 5. Install OH-MY-ZSH on Gentoo with beautiful powerlevel10k theme
 
 1. Remove package.use directory
-
 ```
 rm -R /etc/portage/package.use
 ```
 and replace this directory with file
-
 ```
 nano /etc/portage/package.use
 ```
 content of `package.use`
-
 ```
-# MC
 app-misc/mc sftp gpm
-
-# PHP
 dev-lang/php bcmath calendar curl mysql mysqli pdo postgres snmp soap sockets sodium sqlite threads xmlreader xmlwriter zip
-
-# SQLITE
 dev-db/sqlite secure-delete
 ```
 2. create file /etc/portage/package.accept_keywords
@@ -165,7 +140,6 @@ nano /etc/portage/package.accept_keywords
 content of `package.accept_keywords`
 
 ```
-# COMPOSER
 dev-php/composer ~amd64
 dev-php/ca-bundle ~amd64
 dev-php/psr-log ~amd64
@@ -184,7 +158,6 @@ dev-php/symfony-dependency-injection ~amd64
 dev-php/symfony-config ~amd64
 net-libs/nghttp2 ~amd64
 
-# ZSH
 app-shells/oh-my-zsh ~amd64
 ```
 3. edit file `/etc/portage/make.conf`
@@ -235,29 +208,26 @@ PHP_TARGETS="php7-4"
 emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo zsh composer nodejs
 ```
 5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` `zsh-completions`. 😄
-
 ```
 emerge zsh oh-my-zsh gentoo-zsh-completition zsh-completions
 export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
 ```
 6. Or optionaly install oh-my-zsh to user folder.
-
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-> 7. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
-
+```
+7. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
 ```
   sudo git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
   sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 8. Change lines in .zshrc
-
 ```
   nano ~/.zshrc
 ```
 9. change theese lines and add alias for Visual Studio Code.
-
 ```
 ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 ZSH_CUSTOM="/usr/share/zsh/site-contrib/oh-my-zsh/custom"
@@ -296,4 +266,4 @@ cd ~
 
 Complete ! 👍
 
-Thank you.
+Thank you, L0tr4nd0.
