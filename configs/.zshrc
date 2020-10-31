@@ -83,7 +83,7 @@ else
 fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="x86_64"
 
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
@@ -92,5 +92,3 @@ alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-cd ~
