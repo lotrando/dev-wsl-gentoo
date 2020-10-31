@@ -1,0 +1,8 @@
+# MC
+app-misc/mc sftp gpm
+
+# PHP
+dev-lang/php bcmath calendar curl mysql mysqli pdo postgres snmp soap sockets sodium sqlite threads xmlreader xmlwriter zip
+
+# SQLITE
+dev-db/sqlite secure-delete
