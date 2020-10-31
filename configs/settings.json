@@ -7,11 +7,12 @@
     {
         "defaults":
         {
-            "colorScheme": "OneDark",
+            "colorScheme": "Lotrando",
             "fontFace": "FiraCode NF",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "normal",
-            "padding": "8, 8, 8, 8"
+            "padding": "8, 8, 8, 8",
+            "cursorShape": "filledBox"
         },
         "list":
         [
@@ -19,7 +20,7 @@
                 "guid": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
                 "hidden": false,
                 "name": "Gentoo",
-                "tabTitle": "Gentoo LTO",
+                "tabTitle": "Gentoo Linux x64",
                 "source": "Windows.Terminal.Wsl",
                 "icon": "C:\\Gentoo\\gentoo-icon.png",
                 "backgroundImage": "C:\\Gentoo\\zsh.jpg",
@@ -45,19 +46,20 @@
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             }
+            
         ]
     },
     "schemes": 
     [
         {
-            "name": "OneDark",
+            "name": "Lotrando",
             "black": "#1e2127",
-            "red": "#e06c75",
-            "green": "#98c379",
+            "red": "#c03b46",
+            "green": "#729e52",
             "yellow": "#d19a66",
             "blue": "#61afef",
             "purple": "#c678dd",
-            "cyan": "#56b6c2",
+            "cyan": "#39a0ad",
             "white": "#abb2bf",
             "brightBlack": "#5c6370",
             "brightRed": "#e06c75",
@@ -69,8 +71,8 @@
             "brightWhite": "#ffffff",
             "background": "#1e2127",
             "foreground": "#abb2bf",
-            "cursorColor": "#aaaaaa"
-        },
+            "cursorColor": "#2fd429"
+          }
     ],
     "actions":
     [
