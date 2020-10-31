@@ -1,0 +1,103 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
+    "copyOnSelect": false,
+    "copyFormatting": false,
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "OneDark",
+            "fontFace": "FiraCode NF",
+            "fontSize": 11,
+            "fontWeight": "normal",
+            "padding": "8, 8, 8, 8"
+        },
+        "list":
+        [
+            {
+                "guid": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
+                "hidden": false,
+                "name": "Gentoo",
+                "tabTitle": "Gentoo LTO",
+                "source": "Windows.Terminal.Wsl",
+                "icon": "C:\\Gentoo\\gentoo-icon.png",
+                "backgroundImage": "C:\\Gentoo\\zsh.jpg",
+                "backgroundImageAlignment": "center",
+                "useAcrylic": true,
+                "backgroundImageOpacity" : 0.8
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt",
+                "commandline": "cmd.exe"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "name": "Realist",
+            "background": "#0c2736",
+            "black": "#041016",
+            "blue": "#2571a3",
+            "brightBlack": "#858c96",
+            "brightBlue": "#6ba4fa",
+            "brightCyan": "#72bfc9",
+            "brightGreen": "#9ac77d",
+            "brightPurple": "#ee9bda",
+            "brightRed": "#ff7a85",
+            "brightWhite": "#ffffff",
+            "brightYellow": "#fdcc72",
+            "cyan": "#56B6C2",
+            "foreground": "#dadada",
+            "green": "#86c25b",
+            "purple": "#cf83cc",
+            "red": "#d12e3b",
+            "white": "#F8F8F2",
+            "yellow": "#dbcf21"
+        },
+        {
+            "name": "OneDark",
+            "black": "#1e2127",
+            "red": "#e06c75",
+            "green": "#98c379",
+            "yellow": "#d19a66",
+            "blue": "#61afef",
+            "purple": "#c678dd",
+            "cyan": "#56b6c2",
+            "white": "#abb2bf",
+            "brightBlack": "#5c6370",
+            "brightRed": "#e06c75",
+            "brightGreen": "#98c379",
+            "brightYellow": "#d19a66",
+            "brightBlue": "#61afef",
+            "brightPurple": "#c678dd",
+            "brightCyan": "#56b6c2",
+            "brightWhite": "#ffffff",
+            "background": "#1e2127",
+            "foreground": "#abb2bf",
+            "cursorColor": "#aaaaaa"
+          },
+    ],
+    "actions":
+    [
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+        { "command": "find", "keys": "ctrl+shift+f" },
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+    ]
+}
