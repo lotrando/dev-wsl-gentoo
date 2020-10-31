@@ -5,7 +5,7 @@ This is complete WSL installation tutorial, how install Gentoo linux for Web Dev
 
 
 <h1 align="center">
-  <img src="myzsh.png" alt="my p10k setting" />
+  <img src="readme.png" alt="my p10k setting" />
 </h1>
 
 
