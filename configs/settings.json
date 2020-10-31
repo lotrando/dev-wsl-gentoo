@@ -50,27 +50,6 @@
     "schemes": 
     [
         {
-            "name": "Realist",
-            "background": "#0c2736",
-            "black": "#041016",
-            "blue": "#2571a3",
-            "brightBlack": "#858c96",
-            "brightBlue": "#6ba4fa",
-            "brightCyan": "#72bfc9",
-            "brightGreen": "#9ac77d",
-            "brightPurple": "#ee9bda",
-            "brightRed": "#ff7a85",
-            "brightWhite": "#ffffff",
-            "brightYellow": "#fdcc72",
-            "cyan": "#56B6C2",
-            "foreground": "#dadada",
-            "green": "#86c25b",
-            "purple": "#cf83cc",
-            "red": "#d12e3b",
-            "white": "#F8F8F2",
-            "yellow": "#dbcf21"
-        },
-        {
             "name": "OneDark",
             "black": "#1e2127",
             "red": "#e06c75",
@@ -91,7 +70,7 @@
             "background": "#1e2127",
             "foreground": "#abb2bf",
             "cursorColor": "#aaaaaa"
-          },
+        },
     ],
     "actions":
     [
