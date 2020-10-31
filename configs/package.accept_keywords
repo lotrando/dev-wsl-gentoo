@@ -1,3 +1,4 @@
+# COMPOSER
 dev-php/composer ~amd64
 dev-php/ca-bundle ~amd64
 dev-php/psr-log ~amd64
@@ -16,4 +17,5 @@ dev-php/symfony-dependency-injection ~amd64
 dev-php/symfony-config ~amd64
 net-libs/nghttp2 ~amd64
 
+# ZSH
 app-shells/oh-my-zsh ~amd64
