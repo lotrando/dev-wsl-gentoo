@@ -7,7 +7,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 <h1 align="center">
   <img src="readme.png" alt="my p10k setting" />
 </h1>
-
+---
 ### Step 1. Enable WSL and Virtual machines on your Windows
 
 1. Run powershell.exe on Windows 10 as Administrator.
@@ -116,21 +116,6 @@ rc-update add syslog-ng default
 rc-update add gpm default
 rc-update add numlock default
 ```
-
-5. Configure `sudo`, in `/etc/sudoers`.
-
-* uncomment next line to allow members of group `wheel` to execute any command as root.
-
-```
-%wheel ALL=(ALL) ALL
-```
-
-* or same thing without password
-
-```
-%wheel ALL=(ALL) NOPASSWD: ALL
-```
-
 ---
 
 ### Step 4. Edit .reg file for switch Windows Terminal to run as user default
@@ -275,20 +260,34 @@ PHP_TARGETS="php7-4"
 emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo composer nodejs
 ```
 
-5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` and `zsh-completions`. 😄
+5. Configure `sudo`, in `/etc/sudoers`.
+
+* uncomment next line to allow members of group `wheel` to execute any command as root.
+
+```
+%wheel ALL=(ALL) ALL
+```
+
+* or same thing without password
+
+```
+%wheel ALL=(ALL) NOPASSWD: ALL
+```
+
+6. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` and `zsh-completions`. 😄
 
 ```
 emerge zsh oh-my-zsh gentoo-zsh-completions zsh-completions
 ```
 
-6. Set path for plugins and theme instlallation
+7. Set path for plugins and theme instlallation
 
 ```
 export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
 ```
 
-7. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
+8. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
 
 ```
   git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -296,7 +295,7 @@ export ZSH_CUSTOM="$ZSH/custom"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 
-8. Create ~/.zshrc and /root/.zshrc
+9. Create ~/.zshrc and /root/.zshrc
 
 ```
   nano ~/.zshrc
@@ -405,10 +404,9 @@ alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-9. Copy [.p10k.zsh](https://github.com/lotrando/wsl-gentoo/raw/main/configs/.p10k.zsh) file from this repository to `~/` as the classic user and `/root/.p10k.zsh` as root.
+10. Copy [.p10k.zsh](https://github.com/lotrando/wsl-gentoo/raw/main/configs/.p10k.zsh) file from this repository to `~/` as the classic user and `/root/.p10k.zsh` as root.
 
-10. Gentoo-zsh-completions package, contains helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc.
+11. Gentoo-zsh-completions package, contains helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc.
+---
 
-11. Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windows and happy code.
- 
-Thanks, L0tr4nd0
+Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windows and happy code. Thanks, L0tr4nd0
