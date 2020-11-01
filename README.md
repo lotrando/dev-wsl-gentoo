@@ -303,7 +303,7 @@ export ZSH_CUSTOM="$ZSH/custom"
   nano /root/.zshrc
 ```
 
-Insert theese lines int both config files ( this config added alias for Visual Studio Code 👍 ).
+Insert theese lines into both config files. For root user don't must have *laravel composer npm npx* in plugins and alias for Visual Studio Code 👍.
 
 ```
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
