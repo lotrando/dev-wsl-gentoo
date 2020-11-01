@@ -59,7 +59,7 @@ With my configs your terminal might look like this 👇
 
 ### Step 3. Config Windows Terminal, update portage, install packages and create user
 
-1. Run Windows Terminal, open setting and copy&paste from [my Windows Terminal settings](https://github.com/lotrando/wsl-gentoo/blob/main/configs/settings.json) and modify with your wsl_machine_id an save it. Changes applied.
+1. Run Windows Terminal, open setting and copy&paste from my Windows Terminal [settings.json file](https://github.com/lotrando/wsl-gentoo/blob/main/configs/settings.json) and modify with your wsl_machine_id an save it, changes applied immediately.
 
 2. In Windows Terminal run Gentoo distro ( default is root ) and run
 
