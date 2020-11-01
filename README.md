@@ -20,7 +20,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ```
   dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-4. Download [WSL 2 kernel upddate](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) from next link and install it.
+4. Download [WSL 2 kernel upddate](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install it.
 
 5. Reboot your Windows 10.
 ---
