@@ -16,10 +16,12 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ```
   dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
+
 3. Enable Hyper-V for WSL 2 (Additional requirement for WSL 2 support).
 ```
   dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
+
 4. Download [WSL 2 kernel upddate](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install it.
 
 5. Reboot your Windows 10.
@@ -30,7 +32,8 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 Run again powershell.exe as Administrator and set working directory to `C:\Users\YOURUSERNAME\Downloads\`
 
 2. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/),
-or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\` and 
+or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to 
+`C:\Users\YOURUSERNAME\Downloads\` and 
 
 3. Extract file to simple .tar with 7Zip. Destination file must have file extension like this.
 `stage3-amd64-nomultilib-20201028T214503Z.tar`.
