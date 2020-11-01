@@ -37,7 +37,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 3. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/),
    or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\`.
 
-4. Extract file to simple .tar with 7Zip. Destination file must have file extension like this an his location must be
+4. Extract file to simple .tar with 7Zip. Destination file must have .tar file extension and his location must be
 `C:\Users\YOURUSERNAME\Downloads\stage3-amd64-nomultilib-20201028T214503Z.tar`.
 
 5. Create WSL 2 machine with name "Gentoo" in directory "C:\Gentoo" from "stage3-amd64-nomultilib-20201028T214503Z.tar".
