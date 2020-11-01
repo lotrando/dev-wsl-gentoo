@@ -1,6 +1,8 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
+    // start your Gentoo machinesettings //
+    "defaultProfile": "{  ... your_gentoo_wsl_machine_id ... }",
+     // end your Gentoo machine settings //
     "copyOnSelect": false,
     "copyFormatting": false,
     "profiles":
@@ -17,31 +19,23 @@
         "list":
         [
             {
-                "guid": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
+                // start your Gentoo machinesettings //
+                "guid": "{... your_gentoo_wsl_machine_id ...}",
+                 // end your Gentoo machine settings //
                 "hidden": false,
                 "name": "Gentoo",
-                "tabTitle": "Gentoo LTO",
+                "tabTitle": "Gentoo Linux",
                 "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Gentoo\\gentoo.png",
-                "backgroundImage": "C:\\Gentoo\\7.jpg",
+                "icon": "C:\\Gentoo\\gentoo-icon.png",
+                "backgroundImage": "C:\\Gentoo\\zsh.jpg",
                 "backgroundImageAlignment": "center",
                 "useAcrylic": true,
                 "backgroundImageOpacity" : 0.8
             },
-            {
-                "guid": "{5510f72f-1f45-5292-8471-de0dbad364c9}",
-                "hidden": false,
-                "name": "Test",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Test\\gentoo-icon.png",
-                "backgroundImage": "C:\\Test\\zsh.jpg",
-                "backgroundImageAlignment": "center",
-                "useAcrylic": true,
-                "backgroundImageOpacity" : 0.8
-            },
+            // start optional settings
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe"
             },
@@ -57,6 +51,7 @@
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             }
+            // end optional settings
             
         ]
     },
