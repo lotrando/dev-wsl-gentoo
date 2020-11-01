@@ -228,7 +228,7 @@ PHP_TARGETS="php7-4"
 ```
 4. Install necessary system libs and packages for webdevelopers.
 ```
-emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo zsh composer nodejs
+emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo composer nodejs
 ```
 5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` and `zsh-completions`. 😄
 ```
