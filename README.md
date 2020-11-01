@@ -60,17 +60,23 @@ passwd your_account_name
 ```
 3. Set locales (in my case czech language) and set-up daemons.
 
-Change file `/nano etc/locale.gen`
+Change file
+```
+nano etc/locale.gen
+```
 ```
 cs_CZ ISO-8859-2
 cs_CZ.UTF-8 UTF-8
 ```
-
-Change file `nano /etc/env.d/02locale`
+... and file
+```
+nano /etc/env.d/02locale`
+```
 ```
 LANG="cs_CZ.UTF-8"
 LC_COLLATE="C"
 ```
+run a few commands 
 ```
 locale-gen
 echo "Europe/Prague" > /etc/timezone
@@ -79,13 +85,14 @@ eselect locale list
 eselect locale set (number of selected locale)
 source /etc/profile
 ```
+4. Set few system daemons
 ```
 rc-update add cronie default
 rc-update add syslog-ng default
 rc-update add gpm default
 rc-update add numlock default
 ```
-2. Configure `sudo`, in `/etc/sudoers`.
+5. Configure `sudo`, in `/etc/sudoers`.
 uncomment next line to allow members of group `wheel` to execute any command as root.
 ```
 %wheel ALL=(ALL) ALL
@@ -97,11 +104,11 @@ or same thing without password
 ---
 ## Step 4. Edit registration file for switch Windows Terminal to run with default classic user
 
-In regedit.exe find
+Run regedit.exe in windows and find
 
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\....`
 
-chose your Gentoo and change
+chose your Gentoo ID and change item
 
 `"DefaultUid"=dword:00000000 -> "DefaultUid"=dword:000003e8`
 
@@ -223,43 +230,37 @@ PHP_TARGETS="php7-4"
 ```
 emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo zsh composer nodejs
 ```
-5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` `zsh-completions`. 😄
+5. Now we can regulary install `zsh` and masked `oh-my-zsh`by ~amd64 with usefull `gentoo-zsh-completition` and `zsh-completions`. 😄
 ```
 emerge zsh oh-my-zsh gentoo-zsh-completions zsh-completions
+```
+6. Set path for plugins and theme instlallation
+```
 export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
 ```
-6. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
+7. Install powerlevel10k theme with config wizad and 2 usefull zsh plugins autosuggestions and syntax-highlighting as root for all users.
 ```
   git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
-7. Change lines in .zshrc
+8. Change lines in .zshrc
 ```
   nano ~/.zshrc
 ```
-8. change theese lines and add alias for Visual Studio Code.
+Change theese lines and add alias for Visual Studio Code.
 ```
 ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
 ZSH_CUSTOM="/usr/share/zsh/site-contrib/oh-my-zsh/custom"
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
 CASE_SENSITIVE="true"
-
 ENABLE_CORRECTION="true"
-
 COMPLETION_WAITING_DOTS="true"
-
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 HIST_STAMPS="dd.mm.yyyy"
-
 plugins=(zsh-autosuggestions zsh-syntax-highlighting git laravel composer npm npx)
-
 source $ZSH/oh-my-zsh.sh
-
 export LANG=cs_CZ.UTF-8
 
 if [[ -n $SSH_CONNECTION ]]; then
@@ -271,11 +272,9 @@ fi
 alias zshconfig="nano ~/.zshrc"
 alias p10config="nano ~/.p10k.zsh"
 alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
-
-cd ~
 ```
-10. Copy `.zshrc` and `.p10k.zsh` from this repository to ~/ for user and root.
+10. Or copy the `.zshrc` and `.p10k.zsh` files from this repository to ~ / for the classic user and root superuser.
 
-Complete ! Use awesome terminal in Windosws 👍
+Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windosws and happy code.
 
 Thank you, L0tr4nd0.
