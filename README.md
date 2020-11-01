@@ -47,7 +47,9 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
   wsl --setdefault Gentoo
 ```
 7. Download my favourite patched Nerd Font <strong>Fira Code Regular Nerd Font Complete Windows Compatible</strong>
-[Fira Code Regular Nerd Font](https://github.com/lotrando/wsl-gentoo/raw/main/fonts/FiraCode%20NF/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf) and install it.
+[Fira Code Regular Nerd Font](https://github.com/lotrando/wsl-gentoo/raw/main/fonts/FiraCode%20NF/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf)install it.
+
+8. Download [Gentoo icon](https://github.com/lotrando/wsl-gentoo/blob/main/configs/gentoo-icon.png) and [backgroud](https://github.com/lotrando/wsl-gentoo/blob/main/configs/zsh.jpg) for Windows Terminal and copy it to C:\Gentoo 
 ---
 
 ### Step 3. Config Windows Terminal, update portage, install packages and create user
@@ -328,4 +330,4 @@ alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
 
 11. Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windows and happy code.
  
-## L0tr4nd0
+Thanks, L0tr4nd0
