@@ -10,7 +10,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 
 ### Step 1. Enable WSL and Virtual machines on your Windows
 
-1. Run powershell.exe on windows 10 as Administrator.
+1. Run powershell.exe on Windows 10 as Administrator.
 
 2. Enable Microsoft-Windows-Subsystem-Linux components for WSL 1.
 
@@ -58,7 +58,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 
 ### Step 3. Config Windows Terminal, update portage, install packages and create user
 
-1. Run Windows Terminal, open setting and copy&paste [my Windows Terminal settings](https://github.com/lotrando/wsl-gentoo/blob/main/configs/settings.json). Only your Gentoo magine not edit.
+1. Run Windows Terminal, open setting and copy&paste from [my Windows Terminal settings](https://github.com/lotrando/wsl-gentoo/blob/main/configs/settings.json) and modify with your wsl_machine_id an save it. Changes applied.
 
 2. In Windows Terminal run Gentoo distro ( default is root ) and run
 
