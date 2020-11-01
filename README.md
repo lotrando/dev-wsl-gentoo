@@ -261,7 +261,7 @@ LC_MESSAGES=C
 LINGUAS="cs"
 L10N="cs"
 
-USE="-X -gtk -gnome -kde -perl -qt5 sqlite nls"
+USE="-X -gtk -gnome -kde -perl -qt5 nls"
 
 PYTHON_TARGETS="python2_7 python3_7"
 PYTHON_SINGLE_TARGET="python3_7"
@@ -296,39 +296,116 @@ export ZSH_CUSTOM="$ZSH/custom"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 
-8. Create ~/.zshrc
+8. Create ~/.zshrc and /root/.zshrc
 
 ```
   nano ~/.zshrc
+  nano /root/.zshrc
 ```
 
-Insert theese lines and add alias for Visual Studio Code.
+Insert theese lines int both config files ( this config added alias for Visual Studio Code 👍 ).
 
 ```
-ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
-ZSH_CUSTOM="/usr/share/zsh/site-contrib/oh-my-zsh/custom"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-CASE_SENSITIVE="true"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd.mm.yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM="/usr/share/zsh/site-contrib/oh-my-zsh/custom"
+
 plugins=(zsh-autosuggestions zsh-syntax-highlighting git laravel composer npm npx)
+
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
 export LANG=cs_CZ.UTF-8
 
+# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
   export EDITOR='vim'
 fi
 
+# Compilation flags
+export ARCHFLAGS="x86_64"
+
+# Example aliases
 alias zshconfig="nano ~/.zshrc"
 alias p10config="nano ~/.p10k.zsh"
+
+#****************** for command #~ code . *********************
 alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
+#**************************************************************
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-9. Or copy the `.zshrc` and `.p10k.zsh` files from this repository to ~ / for the classic user and root superuser.
+9. Copy [.p10k.zsh](https://github.com/lotrando/wsl-gentoo/raw/main/configs/.p10k.zsh) file from this repository to `~/` as the classic user and `/root/.p10k.zsh` as root.
 
 10. Gentoo-zsh-completions package, contains helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc.
 
