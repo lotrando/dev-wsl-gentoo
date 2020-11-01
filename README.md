@@ -2,8 +2,9 @@
 
 Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh and Powerlevel10k theme on Windows.
 
-... with my configuration files, your terminal might look like this 👇
+... all [my configuration files](https://github.com/lotrando/wsl-gentoo/tree/main/configs) are downloadable.
 
+With my configs your terminal might look like this 👇
 <h1 align="center">
   <img src="readme.png" alt="my p10k setting" />
 </h1>
