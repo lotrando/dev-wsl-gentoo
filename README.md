@@ -11,6 +11,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ### Step 1. Enable WSL and Virtual machines on your Windows
 
 1. Run powershell.exe on windows 10 as Administrator.
+
 2. Enable Microsoft-Windows-Subsystem-Linux components for WSL 1.
 
 ```
@@ -30,11 +31,15 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ### Step 2. Create Gentoo WSL Machine
 
 1. Install [Windows Terminal](https://www.microsoft.com/cs-cz/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from Microsoft store.
+
 2. Run again powershell.exe as Administrator and set working directory to `C:\Users\YOURUSERNAME\Downloads\`
+
 3. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/),
    or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\`.
-4. Extract file to simple .tar with 7Zip. Destination file must have file extension like this.
-   `stage3-amd64-nomultilib-20201028T214503Z.tar`.
+
+4. Extract file to simple .tar with 7Zip. Destination file must have file extension like this an his location must be
+`C:\Users\YOURUSERNAME\Downloads\stage3-amd64-nomultilib-20201028T214503Z.tar`.
+
 5. Create WSL 2 machine with name "Gentoo" in directory "C:\Gentoo" from "stage3-amd64-nomultilib-20201028T214503Z.tar".
 
 ```
