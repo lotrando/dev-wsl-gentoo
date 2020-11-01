@@ -9,6 +9,7 @@ With my configs your terminal might look like this 👇
   <img src="readme.png" alt="my p10k setting" />
 </h1>
 ---
+
 ### Step 1. Enable WSL and Virtual machines on your Windows
 
 1. Run powershell.exe on Windows 10 as Administrator.
@@ -255,7 +256,7 @@ PYTHON_SINGLE_TARGET="python3_7"
 PHP_TARGETS="php7-4"
 ```
 
-4. Install necessary system libs and packages for webdevelopers.
+4. Install necessary system packages, libs and packages for webdevelopers.
 
 ```
 emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo composer nodejs
@@ -281,7 +282,7 @@ emerge cronie syslog-ng gpm app-misc/mc genlop gentoolkit lsof htop sudo compose
 emerge zsh oh-my-zsh gentoo-zsh-completions zsh-completions
 ```
 
-7. Set path for plugins and theme instlallation
+7. Set path for plugins and theme installation
 
 ```
 export ZSH="/usr/share/zsh/site-contrib/oh-my-zsh"
@@ -405,9 +406,18 @@ alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-10. Copy [.p10k.zsh](https://github.com/lotrando/wsl-gentoo/raw/main/configs/.p10k.zsh) file from this repository to `~/` as the classic user and `/root/.p10k.zsh` as root.
+10. Download [.p10k.zsh](https://github.com/lotrando/wsl-gentoo/raw/main/configs/.p10k.zsh) and copy file to `~/` as the classic user, and `/root/.p10k.zsh` as root.
 
-11. Gentoo-zsh-completions package, contains helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc.
+```
+chown your_account_name::your_account_name /home/your_account_name/.zshrc .p10k.zsh
+chsh -s /bin/zsh your_account_name && chsh -s /bin/zsh root
+```
 ---
 
-Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windows and happy code. Thanks, L0tr4nd0
+Complete ! 👍 Now your Terminal runs as admin automaticaly run zsh with awesome oh-my-zsh and looks similar to mine.
+
+Use this awesome terminal in Windows and happy code.
+
+Thanks, L0tr4nd0
+
+BTW, Gentoo-zsh-completions package, contains next completions helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc, very usefull for gentoo users 👍
