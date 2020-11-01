@@ -53,7 +53,7 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ```
 7. Download my favourite patched nerd font [<strong>Fira Code Regular Nerd Font Complete Windows Compatible</strong>](https://github.com/lotrando/wsl-gentoo/raw/main/fonts/FiraCode%20NF/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf) install it.
 
-8. Download [<strong>Gentoo icon</strong>](https://github.com/lotrando/wsl-gentoo/blob/main/configs/gentoo-icon.png) and [<strong>backgroud</strong>](https://github.com/lotrando/wsl-gentoo/blob/main/configs/zsh.jpg) for Windows Terminal and copy it to C:\Gentoo 
+8. Download [<strong>Gentoo icon</strong>](https://github.com/lotrando/wsl-gentoo/raw/main/configs/gentoo-icon.png) and [<strong>backgroud</strong>](https://github.com/lotrando/wsl-gentoo/raw/main/configs/zsh.jpg) for Windows Terminal and copy it to C:\Gentoo 
 ---
 
 ### Step 3. Config Windows Terminal, update portage, install packages and create user
