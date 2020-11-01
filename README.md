@@ -1,12 +1,14 @@
 # Web develop Gentoo for WSL by Lotrando
 
-This is complete WSL installation tutorial, how install Gentoo linux for Web Developing with oh-my-zsh and Powerlevel10k theme on Windows.
+Complete WSL installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh and Powerlevel10k theme on Windows.
+
+with my configuration files, your terminal might look like this ... 
 
 <h1 align="center">
   <img src="readme.png" alt="my p10k setting" />
 </h1>
 
-## Step 1. Enable Microsoft-Windows-Subsystem-Linux and Virtual machines on your Windows 10
+## Step 1. Enable Windows Subsystem Linux and Virtual machines on your Windows
 
 1. Run powershell.exe on windows 10 as Administrator.
 
@@ -18,10 +20,8 @@ This is complete WSL installation tutorial, how install Gentoo linux for Web Dev
 ```
   dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-4. Download WSL 2 kernel upddate from next link and install it.
-```
-  https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-```
+4. Download [WSL 2 kernel upddate](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) from next link and install it.
+
 5. Reboot your Windows 10.
 ---
 ## Step 2. Create Gentoo WSL Machine
@@ -30,13 +30,14 @@ This is complete WSL installation tutorial, how install Gentoo linux for Web Dev
 
 2. Download actual stage 3 from [here](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/) or download stage from [this link](https://mirror.bytemark.co.uk/gentoo//releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-nomultilib-20201028T214503Z.tar.xz) to `C:\Users\YOURUSERNAME\Downloads\` and decompres file to simple *.tar with 7Zip.
 
-3. Destination file must have name `stage3-amd64-nomultilib-20201028T214503Z.tar`.
+3. Destination file must have name 
+`stage3-amd64-nomultilib-20201028T214503Z.tar`.
 
-4. Create Gentoo WSL Machine
+4. Create Gentoo WSL Machine in C:\ in directory Gentoo
 ```
   wsl --import "Gentoo" "C:\Gentoo" "stage3-amd64-nomultilib-20201028T214503Z.tar" --version 2
 ```
-Set Gentoo to default distro
+5. Set Gentoo to default distro
 ```
   wsl --setdefault Gentoo
 ```
