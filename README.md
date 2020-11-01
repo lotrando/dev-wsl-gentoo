@@ -46,25 +46,28 @@ Installation tutorial, how install Gentoo Linux for Webdevelopers with oh-my-zsh
 ```
   wsl --setdefault Gentoo
 ```
-
+7. Download my favourite patched Nerd Font <strong>Fira Code Regular Nerd Font Complete Windows Compatible</strong>
+[Fira Code Regular Nerd Font](https://github.com/lotrando/wsl-gentoo/raw/main/fonts/FiraCode%20NF/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf) and install it.
 ---
 
-### Step 3. Update portage, install packages and create user
+### Step 3. Config Windows Terminal, update portage, install packages and create user
 
-1. In Windows Terminal run Gentoo distro ( default is root ) and run
+1. Run Windows Terminal, open setting and copy&paste [my Windows Terminal settings](https://github.com/lotrando/wsl-gentoo/blob/main/configs/settings.json). Only your Gentoo magine not edit.
+
+2. In Windows Terminal run Gentoo distro ( default is root ) and run
 
 ```
  mkdir /var/db/repo/gentoo && emerge-webrsync
 ```
 
-2. Create classic user and set password.
+3. Create classic user and set password.
 
 ```
 useradd -m -G audio,video,usb,cdrom,portage,users,wheel -s /bin/bash your_account_name
 passwd your_account_name
 ```
 
-3. Set locales (in my case czech language) and set-up daemons.
+4. Set locales (in my case czech language) and set-up daemons.
 
 * Change file
 
@@ -321,6 +324,8 @@ alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe"
 
 9. Or copy the `.zshrc` and `.p10k.zsh` files from this repository to ~ / for the classic user and root superuser.
 
-10. Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windosws and happy code.
+10. Gentoo-zsh-completions package, contains helpers for gentoo apps as eselect, genlop, gentoolkit, layman, portage etc.
 
-Thank you, L0tr4nd0.
+11. Complete ! 👍 Now your Terminal looks similar to mine. Use this awesome terminal in Windows and happy code.
+ 
+## L0tr4nd0
