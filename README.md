@@ -8,7 +8,6 @@ With my configs your terminal might look like this 👇
 <h1 align="center">
   <img src="readme.png" alt="my p10k setting" />
 </h1>
----
 
 ### Step 1. Enable WSL and Virtual machines on your Windows
 
