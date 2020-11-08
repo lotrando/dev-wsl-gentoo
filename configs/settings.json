@@ -79,6 +79,28 @@
             "foreground": "#d0d6e2",
             "cursorColor": "#2fd429"
         }
+        {
+            "name": "Smooth",
+            "black": "#1e2127",
+            "red": "#b95956",
+            "green": "#909c66",
+            "yellow": "#e9c17f",
+            "blue": "#61afef",
+            "purple": "#af6897",
+            "cyan": "#61afef",
+            "white": "#b5becf",
+            "brightBlack": "#5c6370",
+            "brightRed": "#b95956",
+            "brightGreen": "#909c66",
+            "brightYellow": "#e9c17f",
+            "brightBlue": "#61afef",
+            "brightPurple": "#6b8798",
+            "brightCyan": "#af6897",
+            "brightWhite": "#ffffff",
+            "background": "#353a43",
+            "foreground": "#d9d9d9",
+            "cursorColor": "#729e52"
+        }
     ],
     "actions":
     [
